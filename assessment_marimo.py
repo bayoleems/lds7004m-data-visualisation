@@ -780,7 +780,7 @@ def _(CAT_CMAP, MAPBOX, fig2, gdf_1, geo, mo, px):
     fig13 = px.choropleth_mapbox(geo_sh, geojson=geo_sh.geometry.__geo_interface__, locations=geo_sh.index, color='superhost_rate', hover_name='neighbourhood', hover_data={'superhost_rate': ':.1%'}, color_continuous_scale=CAT_CMAP, mapbox_style=MAPBOX, center={'lat': gdf_1.latitude.median(), 'lon': gdf_1.longitude.median()}, zoom=8.8, opacity=0.75, title='Superhost Rate by London Borough')
     fig13.update_layout(margin={'r': 0, 't': 40, 'l': 0, 'b': 0}, coloraxis_colorbar_title='Superhost Rate')
     mo.ui.plotly(fig13)
-    fig2.write_html('interactive_map_superhost.html')
+    fig13.write_html('interactive_map_superhost.html')
     return
 
 
