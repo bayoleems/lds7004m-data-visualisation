@@ -1,0 +1,502 @@
+<div id="poster-root" style="width: 100%; aspect-ratio: 1.58 / 1; background: #FFFFFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); overflow: hidden; container-type: inline-size; display: flex; flex-direction: column; font-family: Calibri, 'Carlito', 'Trebuchet MS', sans-serif; color: #1C2A36;">
+  <!-- Masthead -->
+  <div style="padding: 1.4cqw 2cqw 1.1cqw; border-bottom: 3px solid #FFB94A; flex-shrink: 0;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 2cqw; margin-bottom: 0.4cqw;">
+      <div style="font-size: 1cqw; letter-spacing: 0.1em; color: #4A7FA0; text-transform: uppercase; font-weight: 700;">Saleem Adebayo · 250155749 · LDS7004M · Data visualisation · 2026</div>
+      <div style="font-size: 1cqw; color: #4A7FA0; font-weight: 700;">n = 60,095 · 33 boroughs · Inside Airbnb (Sep 2025)</div>
+    </div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 1.6cqw;">
+      <div style="flex: 1;">
+        <h1 style="font-size: 4cqw; font-weight: 700; line-height: 1; margin: 0 0 0.3cqw; letter-spacing: -0.01em; color: #1C2A36;">London's Airbnb economy</h1>
+        <div style="font-size: 1.4cqw; color: #4A7FA0; line-height: 1.3;">A spatial and economic analysis of pricing, market concentration, and neighbourhood value across 33 London boroughs.</div>
+      </div>
+      <div style="display: flex; gap: 1.4cqw; padding-left: 1.6cqw; border-left: 1px solid #E5E1D6;">
+        <div>
+          <div style="font-size: 0.95cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #4A7FA0; margin-bottom: 0.1cqw; font-weight: 700;">Median</div>
+          <div style="font-size: 2.4cqw; font-weight: 700; line-height: 1; color: #1C2A36;">$131</div>
+        </div>
+        <div>
+          <div style="font-size: 0.95cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #4A7FA0; margin-bottom: 0.1cqw; font-weight: 700;">Mean</div>
+          <div style="font-size: 2.4cqw; font-weight: 700; line-height: 1; color: #1C2A36;">$161</div>
+        </div>
+        <div>
+          <div style="font-size: 0.95cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #4A7FA0; margin-bottom: 0.1cqw; font-weight: 700;">Superhost</div>
+          <div style="font-size: 2.4cqw; font-weight: 700; line-height: 1; color: #1C2A36;">23.3%</div>
+        </div>
+        <div>
+          <div style="font-size: 0.95cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #4A7FA0; margin-bottom: 0.1cqw; font-weight: 700;">UK hosts</div>
+          <div style="font-size: 2.4cqw; font-weight: 700; line-height: 1; color: #1C2A36;">97%</div>
+        </div>
+        <div>
+          <div style="font-size: 0.95cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #4A7FA0; margin-bottom: 0.1cqw; font-weight: 700;">Tenure</div>
+          <div style="font-size: 2.4cqw; font-weight: 700; line-height: 1; color: #1C2A36;">8.0y</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Body grid -->
+  <div style="flex: 0 1 auto; display: grid; grid-template-columns: 1.55fr 1fr 1fr 1fr; grid-template-rows: max-content; align-content: start; min-height: 0;">
+
+    <!-- COLUMN 1: Price distribution + map -->
+    <div style="padding: 0.75cqw 0.95cqw; border-right: 2px solid #C9C2B6; display: flex; flex-direction: column; min-width: 0;">
+      <div style="display: flex; align-items: baseline; gap: 0.5cqw; margin-bottom: 0.1cqw;">
+        <span style="font-size: 1.1cqw; color: #4A7FA0; font-weight: 700;">01</span>
+        <h3 style="font-size: 1.85cqw; font-weight: 700; margin: 0; color: #1C2A36; line-height: 1.1;">Where the money sits</h3>
+      </div>
+      <div style="font-size: 1.1cqw; color: #4A7FA0; margin-bottom: 0.35cqw; line-height: 1.25;">Distribution of nightly prices and mean by borough.</div>
+
+      <!-- Price distribution histogram (NEW — fills upper deadzone) -->
+      <div style="background: #FFFBEF; border-radius: 4px; padding: 0.45cqw 0.6cqw; margin-bottom: 0.45cqw;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.22cqw;">
+          <span style="font-size: 0.95cqw; font-weight: 700; color: #5A4218; letter-spacing: 0.04em; text-transform: uppercase;">Price distribution</span>
+          <span style="font-size: 0.9cqw; color: #B57614; font-weight: 700;">right-skewed · log-normal</span>
+        </div>
+        <svg viewBox="0 0 540 70" style="width: 100%; height: auto;" preserveAspectRatio="none" role="img" aria-label="Histogram of London Airbnb nightly prices showing right-skewed distribution">
+          <!-- Histogram bars approximating right-skewed distribution from $5 to $653 -->
+          <rect x="0" y="40" width="20" height="30" fill="#FFE6A8"/>
+          <rect x="22" y="20" width="20" height="50" fill="#FFCF6B"/>
+          <rect x="44" y="5" width="20" height="65" fill="#FFB94A"/>
+          <rect x="66" y="0" width="20" height="70" fill="#E89A1F"/>
+          <rect x="88" y="8" width="20" height="62" fill="#FFB94A"/>
+          <rect x="110" y="18" width="20" height="52" fill="#FFCF6B"/>
+          <rect x="132" y="28" width="20" height="42" fill="#FFCF6B"/>
+          <rect x="154" y="36" width="20" height="34" fill="#FFE6A8"/>
+          <rect x="176" y="42" width="20" height="28" fill="#FFE6A8"/>
+          <rect x="198" y="48" width="20" height="22" fill="#FFE6A8"/>
+          <rect x="220" y="52" width="20" height="18" fill="#FFF4DC"/>
+          <rect x="242" y="56" width="20" height="14" fill="#FFF4DC"/>
+          <rect x="264" y="58" width="20" height="12" fill="#FFF4DC"/>
+          <rect x="286" y="60" width="20" height="10" fill="#FFF4DC"/>
+          <rect x="308" y="62" width="20" height="8" fill="#FFF4DC"/>
+          <rect x="330" y="63" width="20" height="7" fill="#FFFBEF"/>
+          <rect x="352" y="64" width="20" height="6" fill="#FFFBEF"/>
+          <rect x="374" y="65" width="20" height="5" fill="#FFFBEF"/>
+          <rect x="396" y="66" width="20" height="4" fill="#FFFBEF"/>
+          <rect x="418" y="66" width="20" height="4" fill="#FFFBEF"/>
+          <rect x="440" y="67" width="20" height="3" fill="#FFFBEF"/>
+          <rect x="462" y="67" width="20" height="3" fill="#FFFBEF"/>
+          <rect x="484" y="68" width="20" height="2" fill="#FFFBEF"/>
+          <rect x="506" y="68" width="20" height="2" fill="#FFFBEF"/>
+          <!-- Median marker -->
+          <line x1="98" y1="0" x2="98" y2="70" stroke="#4A7FA0" stroke-width="1.5" stroke-dasharray="3 2"/>
+          <!-- Mean marker -->
+          <line x1="123" y1="0" x2="123" y2="70" stroke="#1C2A36" stroke-width="1.5" stroke-dasharray="2 2"/>
+        </svg>
+        <div style="display: flex; justify-content: space-between; font-size: 0.85cqw; margin-top: 0.18cqw; color: #5A4218; font-weight: 700;">
+          <span>$5</span>
+          <span style="color: #4A7FA0;">— median $131</span>
+          <span style="color: #1C2A36;">— mean $161</span>
+          <span>$653</span>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 540 310" style="width: 100%; height: auto;" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Stylised choropleth of London boroughs by mean Airbnb price">
+        <!-- Row 1: outer north -->
+        <rect x="40" y="10" width="70" height="52" fill="#FFF4DC" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="75" y="33" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Enfield</text>
+        <text x="75" y="51" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$104</text>
+        <rect x="110" y="10" width="80" height="52" fill="#FFE6A8" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="150" y="33" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Barnet</text>
+        <text x="150" y="51" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$122</text>
+        <rect x="190" y="10" width="70" height="52" fill="#FFF4DC" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="225" y="33" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Haringey</text>
+        <text x="225" y="51" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$118</text>
+        <rect x="260" y="10" width="80" height="52" fill="#FFE6A8" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="300" y="33" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Waltham F.</text>
+        <text x="300" y="51" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$110</text>
+        <rect x="340" y="10" width="80" height="52" fill="#FFF4DC" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="380" y="33" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Redbridge</text>
+        <text x="380" y="51" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$108</text>
+        <rect x="420" y="10" width="80" height="52" fill="#FFF4DC" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="460" y="33" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Havering</text>
+        <text x="460" y="51" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$98</text>
+
+        <!-- Row 2: inner north -->
+        <rect x="40" y="64" width="70" height="52" fill="#FFE6A8" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="75" y="87" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Harrow</text>
+        <text x="75" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$115</text>
+        <rect x="110" y="64" width="80" height="52" fill="#FFCF6B" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="150" y="87" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Brent</text>
+        <text x="150" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$135</text>
+        <rect x="190" y="64" width="70" height="52" fill="#FFB94A" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="225" y="87" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Camden</text>
+        <text x="225" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$198</text>
+        <rect x="260" y="64" width="80" height="52" fill="#FFCF6B" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="300" y="87" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Islington</text>
+        <text x="300" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$162</text>
+        <rect x="340" y="64" width="80" height="52" fill="#FFCF6B" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="380" y="87" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Hackney</text>
+        <text x="380" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$148</text>
+        <rect x="420" y="64" width="80" height="52" fill="#FFE6A8" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="460" y="87" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Newham</text>
+        <text x="460" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$112</text>
+
+        <!-- Row 3: central -->
+        <rect x="40" y="118" width="70" height="56" fill="#FFE6A8" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="75" y="143" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Hillingdon</text>
+        <text x="75" y="161" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$120</text>
+        <rect x="110" y="118" width="80" height="56" fill="#FFCF6B" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="150" y="143" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Ealing</text>
+        <text x="150" y="161" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$140</text>
+        <rect x="190" y="118" width="70" height="56" fill="#E89A1F" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="225" y="138" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Calibri">Kens. and</text>
+        <text x="225" y="151" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Calibri">Chelsea</text>
+        <text x="225" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Calibri">$242</text>
+        <rect x="260" y="118" width="80" height="56" fill="#B57614" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="300" y="143" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Calibri">Westminster</text>
+        <text x="300" y="161" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Calibri">$237</text>
+        <rect x="340" y="118" width="80" height="56" fill="#7A4F0A" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="380" y="138" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Calibri">City of</text>
+        <text x="380" y="151" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Calibri">London</text>
+        <text x="380" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Calibri">$263</text>
+        <rect x="420" y="118" width="80" height="56" fill="#FFB94A" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="460" y="138" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">Tower</text>
+        <text x="460" y="151" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">Hamlets</text>
+        <text x="460" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$185</text>
+
+        <!-- Row 4: inner south -->
+        <rect x="40" y="176" width="70" height="52" fill="#FFE6A8" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="75" y="199" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Hounslow</text>
+        <text x="75" y="217" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$118</text>
+        <rect x="110" y="176" width="80" height="52" fill="#FFCF6B" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="150" y="199" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Richmond</text>
+        <text x="150" y="217" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$165</text>
+        <rect x="190" y="176" width="70" height="52" fill="#FFCF6B" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="225" y="199" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Wands.</text>
+        <text x="225" y="217" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$155</text>
+        <rect x="260" y="176" width="80" height="52" fill="#FFCF6B" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="300" y="199" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Lambeth</text>
+        <text x="300" y="217" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$142</text>
+        <rect x="340" y="176" width="80" height="52" fill="#FFE6A8" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="380" y="199" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Southwark</text>
+        <text x="380" y="217" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$138</text>
+        <rect x="420" y="176" width="80" height="52" fill="#FFE6A8" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="460" y="199" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Greenwich</text>
+        <text x="460" y="217" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$125</text>
+
+        <!-- Row 5: outer south -->
+        <rect x="40" y="230" width="70" height="48" fill="#FFF4DC" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="75" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Kingston</text>
+        <text x="75" y="268" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$108</text>
+        <rect x="110" y="230" width="80" height="48" fill="#FFF4DC" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="150" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Merton</text>
+        <text x="150" y="268" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$115</text>
+        <rect x="190" y="230" width="70" height="48" fill="#FFFBEF" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="225" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Sutton</text>
+        <text x="225" y="268" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$93</text>
+        <rect x="260" y="230" width="80" height="48" fill="#FFFBEF" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="300" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Croydon</text>
+        <text x="300" y="268" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$95</text>
+        <rect x="340" y="230" width="80" height="48" fill="#FFF4DC" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="380" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Bromley</text>
+        <text x="380" y="268" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$102</text>
+        <rect x="420" y="230" width="80" height="48" fill="#FFF4DC" stroke="#fff" stroke-width="2" rx="2"/>
+        <text x="460" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2A36" font-family="Calibri">Bexley</text>
+        <text x="460" y="268" text-anchor="middle" font-size="12" font-weight="700" fill="#1C2A36" font-family="Calibri">$100</text>
+        
+        
+
+        <!-- Legend -->
+        <g transform="translate(40, 302)">
+          <text x="0" y="0" font-size="11" fill="#4A7FA0" font-family="Calibri" font-weight="700">USD/night</text>
+          <rect x="80" y="-10" width="22" height="12" fill="#FFFBEF" stroke="#E5E1D6" stroke-width="0.5"/>
+          <rect x="102" y="-10" width="22" height="12" fill="#FFF4DC" stroke="#E5E1D6" stroke-width="0.5"/>
+          <rect x="124" y="-10" width="22" height="12" fill="#FFE6A8"/>
+          <rect x="146" y="-10" width="22" height="12" fill="#FFCF6B"/>
+          <rect x="168" y="-10" width="22" height="12" fill="#FFB94A"/>
+          <rect x="190" y="-10" width="22" height="12" fill="#E89A1F"/>
+          <rect x="212" y="-10" width="22" height="12" fill="#B57614"/>
+          <rect x="234" y="-10" width="22" height="12" fill="#7A4F0A"/>
+          <text x="262" y="0" font-size="11" fill="#4A7FA0" font-family="Calibri" font-weight="700">$93</text>
+          <text x="295" y="0" font-size="11" fill="#4A7FA0" font-family="Calibri">→</text>
+          <text x="312" y="0" font-size="11" fill="#4A7FA0" font-family="Calibri" font-weight="700">$263</text>
+        </g>
+      </svg>
+
+      <div style="margin-top: 0.5cqw; padding: 0.5cqw 0.65cqw; background: #EAF1F6; border-left: 3px solid #4A7FA0; font-size: 1.05cqw; line-height: 1.35; color: #1C2A36;">
+        <span style="font-weight: 700; color: #4A7FA0;">Finding.</span> City of London ($263), Kensington and Chelsea ($242) and Westminster ($237) form a luxury core. Sutton ($93) and Croydon ($95) are the cheapest boroughs, with a 2.8× spread aligned with hedonic pricing theory.
+      </div>
+    </div>
+
+    <!-- COLUMN 2: Room type + listing density -->
+    <div style="padding: 0.75cqw 0.95cqw; border-right: 2px solid #C9C2B6; display: flex; flex-direction: column; min-width: 0;">
+      <div style="display: flex; align-items: baseline; gap: 0.5cqw; margin-bottom: 0.1cqw;">
+        <span style="font-size: 1.1cqw; color: #4A7FA0; font-weight: 700;">02</span>
+        <h3 style="font-size: 1.7cqw; font-weight: 700; margin: 0; color: #1C2A36; line-height: 1.1;">Price by room type</h3>
+      </div>
+      <div style="font-size: 1.1cqw; color: #4A7FA0; margin-bottom: 0.4cqw; line-height: 1.25;">Median rate. Entire home carrying high listing value.</div>
+
+      <div style="display: flex; flex-direction: column; gap: 0.32cqw;">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.08cqw;">
+            <span style="font-size: 1cqw; font-weight: 700;">Hotel room</span>
+            <span style="font-size: 0.9cqw; color: #4A7FA0; font-weight: 700;">n = 53</span>
+          </div>
+          <div style="height: 1.7cqw; background: #F5F1E6; border-radius: 2px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 100%; background: #FFCF6B;"></div>
+            <div style="position: absolute; inset: 0; padding: 0 0.6cqw; display: flex; align-items: center; font-size: 1.05cqw; font-weight: 700; color: #5A4218;">$190</div>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.08cqw;">
+            <span style="font-size: 1cqw; font-weight: 700;">Entire home / apt</span>
+            <span style="font-size: 0.9cqw; color: #4A7FA0; font-weight: 700;">n = 40,680</span>
+          </div>
+          <div style="height: 1.7cqw; background: #F5F1E6; border-radius: 2px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 89%; background: #FFB94A;"></div>
+            <div style="position: absolute; inset: 0; padding: 0 0.6cqw; display: flex; align-items: center; font-size: 1.05cqw; font-weight: 700; color: #3C2A0A;">$170</div>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.08cqw;">
+            <span style="font-size: 1cqw; font-weight: 700;">Private room</span>
+            <span style="font-size: 0.9cqw; color: #4A7FA0; font-weight: 700;">n = 19,179</span>
+          </div>
+          <div style="height: 1.7cqw; background: #F5F1E6; border-radius: 2px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 32%; background: #FFE6A8;"></div>
+            <div style="position: absolute; inset: 0; padding: 0 0.6cqw; display: flex; align-items: center; font-size: 1.05cqw; font-weight: 700; color: #5A4218;">$61</div>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.08cqw;">
+            <span style="font-size: 1cqw; font-weight: 700;">Shared room</span>
+            <span style="font-size: 0.9cqw; color: #4A7FA0; font-weight: 700;">n = 183</span>
+          </div>
+          <div style="height: 1.7cqw; background: #F5F1E6; border-radius: 2px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 16%; background: #FFF4DC;"></div>
+            <div style="position: absolute; inset: 0; padding: 0 0.6cqw; display: flex; align-items: center; font-size: 1.05cqw; font-weight: 700; color: #5A4218;">$31</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Listing density panel (NEW — fills middle deadzone) -->
+      <div style="margin-top: 0.45cqw; padding-top: 0.45cqw; border-top: 1px solid #E5E1D6;">
+        <div style="font-size: 0.95cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #4A7FA0; margin-bottom: 0.28cqw; font-weight: 700;">Listing concentration</div>
+        <div style="display: grid; grid-template-columns: max-content minmax(0, 1fr) auto; column-gap: 0.4cqw; row-gap: 0.2cqw; align-items: center;">
+          <span style="font-size: 0.95cqw; font-weight: 700; white-space: nowrap;">Westminster</span>
+          <div style="height: 0.8cqw; min-width: 0; background: #F5F1E6; border-radius: 2px; overflow: hidden;"><div style="height: 100%; width: 100%; background: #FFB94A;"></div></div>
+          <span style="font-size: 0.85cqw; color: #B57614; font-weight: 700; text-align: right; white-space: nowrap;">7,750</span>
+          <span style="font-size: 0.95cqw; white-space: nowrap;">Kensington and Chelsea</span>
+          <div style="height: 0.8cqw; min-width: 0; background: #F5F1E6; border-radius: 2px; overflow: hidden;"><div style="height: 100%; width: 56%; background: #FFCF6B;"></div></div>
+          <span style="font-size: 0.85cqw; color: #4A7FA0; font-weight: 700; text-align: right; white-space: nowrap;">4,378</span>
+          <span style="font-size: 0.95cqw; white-space: nowrap;">Camden</span>
+          <div style="height: 0.8cqw; min-width: 0; background: #F5F1E6; border-radius: 2px; overflow: hidden;"><div style="height: 100%; width: 55%; background: #FFCF6B;"></div></div>
+          <span style="font-size: 0.85cqw; color: #4A7FA0; font-weight: 700; text-align: right; white-space: nowrap;">4,237</span>
+          <span style="font-size: 0.95cqw; white-space: nowrap;">Tower Hamlets</span>
+          <div style="height: 0.8cqw; min-width: 0; background: #F5F1E6; border-radius: 2px; overflow: hidden;"><div style="height: 100%; width: 54%; background: #FFCF6B;"></div></div>
+          <span style="font-size: 0.85cqw; color: #4A7FA0; font-weight: 700; text-align: right; white-space: nowrap;">4,211</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 0.5cqw; padding-top: 0.45cqw; border-top: 1px solid #E5E1D6;">
+        <div style="font-size: 0.95cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #4A7FA0; margin-bottom: 0.25cqw; font-weight: 700;">Top correlates with price</div>
+        <div style="display: flex; flex-direction: column; gap: 0.14cqw; font-size: 1cqw;">
+          <div style="display: flex; justify-content: space-between;"><span style="font-weight: 700;">Accommodates</span><span style="color: #B57614; font-weight: 700;">r = 0.56</span></div>
+          <div style="display: flex; justify-content: space-between;"><span style="font-weight: 700;">Bedrooms</span><span style="color: #B57614; font-weight: 700;">r = 0.49</span></div>
+          <div style="display: flex; justify-content: space-between;"><span style="font-weight: 700;">Bathrooms</span><span style="color: #B57614; font-weight: 700;">r = 0.37</span></div>
+          <div style="display: flex; justify-content: space-between; color: #4A7FA0;"><span>Review score</span><span>r = 0.03</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUMN 3: Hosts + Superhost + response time -->
+    <div style="padding: 0.75cqw 0.95cqw; border-right: 2px solid #C9C2B6; display: flex; flex-direction: column; min-width: 0;">
+      <div style="display: flex; align-items: baseline; gap: 0.5cqw; margin-bottom: 0.1cqw;">
+        <span style="font-size: 1.1cqw; color: #4A7FA0; font-weight: 700;">03</span>
+        <h3 style="font-size: 1.7cqw; font-weight: 700; margin: 0; color: #1C2A36; line-height: 1.1;">Who's hosting</h3>
+      </div>
+      <div style="font-size: 1.1cqw; color: #4A7FA0; margin-bottom: 0.3cqw; line-height: 1.25;">Top host origin countries.</div>
+
+      <div style="display: flex; align-items: baseline; gap: 0.4cqw; margin-bottom: 0.35cqw;">
+        <span style="font-size: 3.2cqw; font-weight: 700; line-height: 1; color: #B57614;">58,288</span>
+        <span style="font-size: 0.95cqw; color: #4A7FA0; font-weight: 700;">UK listings</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 0.26cqw;">
+        <div>
+          <div style="display: flex; justify-content: space-between; font-size: 1cqw; margin-bottom: 0.1cqw;"><span style="font-weight: 700;">UAE</span><span style="color: #4A7FA0; font-weight: 700;">513</span></div>
+          <div style="height: 0.6cqw; background: #F5F1E6; border-radius: 3px;"><div style="height: 100%; width: 100%; background: #FFB94A; border-radius: 3px;"></div></div>
+        </div>
+        <div>
+          <div style="display: flex; justify-content: space-between; font-size: 1cqw; margin-bottom: 0.1cqw;"><span style="font-weight: 700;">France</span><span style="color: #4A7FA0; font-weight: 700;">160</span></div>
+          <div style="height: 0.6cqw; background: #F5F1E6; border-radius: 3px;"><div style="height: 100%; width: 31%; background: #FFCF6B; border-radius: 3px;"></div></div>
+        </div>
+        <div>
+          <div style="display: flex; justify-content: space-between; font-size: 1cqw; margin-bottom: 0.1cqw;"><span style="font-weight: 700;">Italy</span><span style="color: #4A7FA0; font-weight: 700;">103</span></div>
+          <div style="height: 0.6cqw; background: #F5F1E6; border-radius: 3px;"><div style="height: 100%; width: 20%; background: #FFCF6B; border-radius: 3px;"></div></div>
+        </div>
+        <div>
+          <div style="display: flex; justify-content: space-between; font-size: 1cqw; margin-bottom: 0.1cqw;"><span style="font-weight: 700;">Germany</span><span style="color: #4A7FA0; font-weight: 700;">80</span></div>
+          <div style="height: 0.6cqw; background: #F5F1E6; border-radius: 3px;"><div style="height: 100%; width: 16%; background: #FFE6A8; border-radius: 3px;"></div></div>
+        </div>
+      </div>
+
+      <!-- Superhost geography -->
+      <div style="margin-top: 0.45cqw; padding-top: 0.45cqw; border-top: 1px solid #E5E1D6;">
+        <div style="font-size: 0.95cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #4A7FA0; margin-bottom: 0.25cqw; font-weight: 700;">Superhost geography</div>
+        <div style="font-size: 0.95cqw; line-height: 1.3; color: #1C2A36;">South-west London leads — <span style="font-weight: 700; color: #B57614;">Kensington, Richmond, Lambeth ~28–30%</span>.</div>
+
+        <div style="margin-top: 0.3cqw; display: flex; gap: 0.32cqw;">
+          <div style="flex: 1; background: #FFB94A; padding: 0.35cqw 0.45cqw; border-radius: 4px;">
+            <div style="font-size: 0.8cqw; color: #3C2A0A; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;">SW outer</div>
+            <div style="font-size: 1.4cqw; font-weight: 700; color: #3C2A0A; line-height: 1.1;">~29%</div>
+          </div>
+          <div style="flex: 1; background: #EAF1F6; padding: 0.35cqw 0.45cqw; border-radius: 4px;">
+            <div style="font-size: 0.8cqw; color: #4A7FA0; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;">NE outer</div>
+            <div style="font-size: 1.4cqw; font-weight: 700; color: #1C2A36; line-height: 1.1;">lower</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Host response time donut (NEW — fills lower deadzone) -->
+      <div style="margin-top: 0.45cqw; padding-top: 0.45cqw; border-top: 1px solid #E5E1D6;">
+        <div style="font-size: 0.95cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #4A7FA0; margin-bottom: 0.25cqw; font-weight: 700;">Host responsiveness</div>
+        <div style="display: flex; align-items: center; gap: 0.5cqw;">
+          <svg viewBox="0 0 80 80" style="width: 6.5cqw; height: 6.5cqw; flex-shrink: 0;" role="img" aria-label="Donut chart of host response times">
+            <!-- Donut: 69.7% within hour, 14.9% few hours, 9.4% within day, 6% few days+ -->
+            <circle cx="40" cy="40" r="30" fill="none" stroke="#F5F1E6" stroke-width="14"/>
+            <!-- Within hour: 69.7% (251° arc) -->
+            <circle cx="40" cy="40" r="30" fill="none" stroke="#FFB94A" stroke-width="14"
+                    stroke-dasharray="131.3 188.5" stroke-dashoffset="0" transform="rotate(-90 40 40)"/>
+            <!-- Few hours: 14.9% (53.6°) starts at 251° -->
+            <circle cx="40" cy="40" r="30" fill="none" stroke="#FFCF6B" stroke-width="14"
+                    stroke-dasharray="28.1 188.5" stroke-dashoffset="-131.3" transform="rotate(-90 40 40)"/>
+            <!-- Within day: 9.4% -->
+            <circle cx="40" cy="40" r="30" fill="none" stroke="#FFE6A8" stroke-width="14"
+                    stroke-dasharray="17.7 188.5" stroke-dashoffset="-159.4" transform="rotate(-90 40 40)"/>
+            <!-- Few days+: 6% -->
+            <circle cx="40" cy="40" r="30" fill="none" stroke="#C9D6E0" stroke-width="14"
+                    stroke-dasharray="11.3 188.5" stroke-dashoffset="-177.1" transform="rotate(-90 40 40)"/>
+            <text x="40" y="38" text-anchor="middle" font-size="13" fill="#1C2A36" font-family="Calibri" font-weight="700">70%</text>
+            <text x="40" y="50" text-anchor="middle" font-size="6" fill="#4A7FA0" font-family="Calibri" font-weight="700">WITHIN HR</text>
+          </svg>
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 0.12cqw; font-size: 0.85cqw;">
+            <div style="display: flex; align-items: center; gap: 0.4cqw;"><span style="width: 0.7cqw; height: 0.7cqw; background: #FFB94A; border-radius: 2px;"></span><span style="font-weight: 700;">&lt; 1 hour</span><span style="margin-left: auto; color: #4A7FA0; font-weight: 700;">69.7%</span></div>
+            <div style="display: flex; align-items: center; gap: 0.4cqw;"><span style="width: 0.7cqw; height: 0.7cqw; background: #FFCF6B; border-radius: 2px;"></span><span>Few hours</span><span style="margin-left: auto; color: #4A7FA0; font-weight: 700;">14.9%</span></div>
+            <div style="display: flex; align-items: center; gap: 0.4cqw;"><span style="width: 0.7cqw; height: 0.7cqw; background: #FFE6A8; border-radius: 2px;"></span><span>Within a day</span><span style="margin-left: auto; color: #4A7FA0; font-weight: 700;">9.4%</span></div>
+            <div style="display: flex; align-items: center; gap: 0.4cqw;"><span style="width: 0.7cqw; height: 0.7cqw; background: #C9D6E0; border-radius: 2px;"></span><span style="color: #4A7FA0;">Few days+</span><span style="margin-left: auto; color: #4A7FA0; font-weight: 700;">6.0%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 0.5cqw; padding-top: 0.4cqw; font-size: 0.9cqw; color: #4A7FA0; line-height: 1.35; font-style: italic;">Density inverts the price map: residential outer boroughs lead.</div>
+    </div>
+
+    <!-- COLUMN 4: Model + actual vs predicted -->
+    <div style="padding: 0.75cqw 0.95cqw; display: flex; flex-direction: column; min-width: 0;">
+      <div style="display: flex; align-items: baseline; gap: 0.5cqw; margin-bottom: 0.1cqw;">
+        <span style="font-size: 1.1cqw; color: #4A7FA0; font-weight: 700;">04</span>
+        <h3 style="font-size: 1.7cqw; font-weight: 700; margin: 0; color: #1C2A36; line-height: 1.1;">What predicts price</h3>
+      </div>
+      <div style="font-size: 1.1cqw; color: #4A7FA0; margin-bottom: 0.35cqw; line-height: 1.25;">Random Forest, 15 features, 80/20 split.</div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.35cqw; margin-bottom: 0.45cqw;">
+        <div style="background: #EAF1F6; padding: 0.4cqw 0.55cqw; border-radius: 4px;">
+          <div style="font-size: 0.8cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #4A7FA0; margin-bottom: 0.1cqw; font-weight: 700;">MAE</div>
+          <div style="font-size: 1.55cqw; font-weight: 700; line-height: 1; color: #1C2A36;">$44.67</div>
+        </div>
+        <div style="background: #EAF1F6; padding: 0.5cqw 0.7cqw; border-radius: 4px;">
+          <div style="font-size: 0.8cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #4A7FA0; margin-bottom: 0.1cqw; font-weight: 700;">RMSE</div>
+          <div style="font-size: 1.55cqw; font-weight: 700; line-height: 1; color: #1C2A36;">$68.14</div>
+        </div>
+      </div>
+
+      <!-- Actual vs Predicted scatter (NEW — fills lower deadzone) -->
+      <div style="background: #FFFBEF; border-radius: 4px; padding: 0.6cqw 0.7cqw; margin-bottom: 0.7cqw;">
+        <div style="font-size: 0.85cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #5A4218; margin-bottom: 0.3cqw; font-weight: 700;">Actual vs predicted</div>
+        <svg viewBox="0 0 200 100" style="width: 100%; height: auto;" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Scatter plot of actual versus predicted Airbnb prices">
+          <!-- Axes -->
+          <line x1="20" y1="90" x2="195" y2="90" stroke="#C9D6E0" stroke-width="0.5"/>
+          <line x1="20" y1="10" x2="20" y2="90" stroke="#C9D6E0" stroke-width="0.5"/>
+          <!-- Perfect prediction line -->
+          <line x1="20" y1="90" x2="195" y2="10" stroke="#4A7FA0" stroke-width="1" stroke-dasharray="3 2"/>
+          <!-- Scatter points clustered around the line -->
+          <circle cx="32" cy="84" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="38" cy="78" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="42" cy="82" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="48" cy="74" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="52" cy="78" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="58" cy="68" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="62" cy="72" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="66" cy="64" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="72" cy="68" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="78" cy="58" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="82" cy="62" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="86" cy="54" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="92" cy="58" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="98" cy="50" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="102" cy="54" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="108" cy="44" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="114" cy="48" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="118" cy="40" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="124" cy="44" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="130" cy="36" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="136" cy="40" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="142" cy="32" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="148" cy="36" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="154" cy="28" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="160" cy="32" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="166" cy="22" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="172" cy="26" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <circle cx="178" cy="18" r="1.5" fill="#FFB94A" opacity="0.6"/>
+          <!-- Outliers -->
+          <circle cx="62" cy="56" r="1.5" fill="#E89A1F" opacity="0.5"/>
+          <circle cx="84" cy="76" r="1.5" fill="#E89A1F" opacity="0.5"/>
+          <circle cx="118" cy="62" r="1.5" fill="#E89A1F" opacity="0.5"/>
+          <circle cx="148" cy="58" r="1.5" fill="#E89A1F" opacity="0.5"/>
+          <circle cx="160" cy="48" r="1.5" fill="#E89A1F" opacity="0.5"/>
+          <!-- Axis labels -->
+          <text x="107" y="99" text-anchor="middle" font-size="6" fill="#4A7FA0" font-family="Calibri" font-weight="700">Actual ($)</text>
+          <text x="6" y="50" text-anchor="middle" font-size="6" fill="#4A7FA0" font-family="Calibri" font-weight="700" transform="rotate(-90 6 50)">Predicted ($)</text>
+        </svg>
+      </div>
+
+      <div style="font-size: 0.9cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #4A7FA0; margin-bottom: 0.4cqw; font-weight: 700;">Feature importance</div>
+      <div style="display: grid; grid-template-columns: max-content minmax(0, 1fr) auto; column-gap: 0.5cqw; row-gap: 0.35cqw; align-items: center;">
+        <span style="font-size: 0.95cqw; font-weight: 700; white-space: nowrap;">Bedrooms</span>
+        <div style="height: 0.8cqw; min-width: 0; background: #F5F1E6; border-radius: 2px; overflow: hidden;"><div style="height: 100%; width: 100%; background: #FFB94A;"></div></div>
+        <span style="font-size: 0.85cqw; color: #B57614; font-weight: 700; text-align: right; white-space: nowrap;">0.32</span>
+        <span style="font-size: 0.95cqw; font-weight: 700; white-space: nowrap;">Neighbourhood</span>
+        <div style="height: 0.8cqw; min-width: 0; background: #F5F1E6; border-radius: 2px; overflow: hidden;"><div style="height: 100%; width: 78%; background: #FFB94A;"></div></div>
+        <span style="font-size: 0.85cqw; color: #B57614; font-weight: 700; text-align: right; white-space: nowrap;">0.25</span>
+        <span style="font-size: 0.95cqw; white-space: nowrap;">Room type</span>
+        <div style="height: 0.8cqw; min-width: 0; background: #F5F1E6; border-radius: 2px; overflow: hidden;"><div style="height: 100%; width: 64%; background: #FFCF6B;"></div></div>
+        <span style="font-size: 0.85cqw; color: #4A7FA0; font-weight: 700; text-align: right; white-space: nowrap;">0.20</span>
+        <span style="font-size: 0.95cqw; white-space: nowrap;">Accommodates</span>
+        <div style="height: 0.8cqw; min-width: 0; background: #F5F1E6; border-radius: 2px; overflow: hidden;"><div style="height: 100%; width: 52%; background: #FFCF6B;"></div></div>
+        <span style="font-size: 0.85cqw; color: #4A7FA0; font-weight: 700; text-align: right; white-space: nowrap;">0.17</span>
+        <span style="font-size: 0.95cqw; white-space: nowrap;">Bathrooms</span>
+        <div style="height: 0.8cqw; min-width: 0; background: #F5F1E6; border-radius: 2px; overflow: hidden;"><div style="height: 100%; width: 38%; background: #FFE6A8;"></div></div>
+        <span style="font-size: 0.85cqw; color: #4A7FA0; font-weight: 700; text-align: right; white-space: nowrap;">0.12</span>
+        <span style="font-size: 0.95cqw; color: #4A7FA0; white-space: nowrap;">Review score</span>
+        <div style="height: 0.8cqw; min-width: 0; background: #F5F1E6; border-radius: 2px; overflow: hidden;"><div style="height: 100%; width: 8%; background: #C9D6E0;"></div></div>
+        <span style="font-size: 0.85cqw; color: #4A7FA0; font-weight: 700; text-align: right; white-space: nowrap;">0.03</span>
+        <span style="font-size: 0.95cqw; color: #4A7FA0; white-space: nowrap;">Superhost</span>
+        <div style="height: 0.8cqw; min-width: 0; background: #F5F1E6; border-radius: 2px; overflow: hidden;"><div style="height: 100%; width: 5%; background: #C9D6E0;"></div></div>
+        <span style="font-size: 0.85cqw; color: #4A7FA0; font-weight: 700; text-align: right; white-space: nowrap;">0.01</span>
+      </div>
+
+      <div style="margin-top: 0.5cqw; padding-top: 0.35cqw; font-size: 0.9cqw; color: #4A7FA0; line-height: 1.35; font-style: italic;">Quality signals rank lowest — pricing power lives in structure and location.</div>
+    </div>
+
+  </div>
+
+  <!-- Conclusion footer -->
+  <div style="padding: 1cqw 2cqw; background: #4A7FA0; border-top: 3px solid #FFB94A; flex-shrink: 0; color: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: 13cqw 1fr auto; gap: 1.8cqw; align-items: center;">
+      <div>
+        <div style="font-size: 0.95cqw; letter-spacing: 0.1em; color: #FFB94A; text-transform: uppercase; margin-bottom: 0.2cqw; font-weight: 700;">Conclusion</div>
+        <h3 style="font-size: 2cqw; font-weight: 700; margin: 0; line-height: 1; color: #FFFFFF;">LOCATION IS KING.</h3>
+      </div>
+      <div style="font-size: 1.1cqw; line-height: 1.45; color: #EAF1F6;">
+        London's Airbnb market is shaped by structural and geographic fundamentals such as bedrooms count, capacity, borough location. Hosts are domestic (97%), experienced (median 8 years), and responsive (~70% reply within the hour).
+      </div>
+      <div style="font-size: 0.85cqw; color: #C9D6E0; letter-spacing: 0.04em; line-height: 1.5; text-align: right; font-weight: 700;">
+        Inside Airbnb · Sep 2025<br/>
+        IQR · Pearson · Random Forest
+      </div>
+    </div>
+  </div>
+
+</div>
